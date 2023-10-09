@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+	grid-template-columns: 100%;
+}
+
+.notes {
+    padding: 20px;
+    text-align: center;
+    margin: 10%;
+}
+
+
+
