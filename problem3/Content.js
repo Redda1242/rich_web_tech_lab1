@@ -13,7 +13,10 @@ const changeImgBtn = document.createElement("BUTTON");
 changeImgBtn.textContent = 'change image';
 changeImgBtn.addEventListener('click', ()=> catImg());
 document.body.appendChild(changeImgBtn);
+document.body.style.backgroundColor = "grey";
 
+//add a random background color
+document.body.addEventListener('click', ()=> getRandomColor());
 
 function catImg()
 {
@@ -30,11 +33,18 @@ function catImg()
 const headers = document.getElementsByTagName("h1");
 for (let i = 0; i < headers.length; i++){
     headers[i].innerText = "Cats are awesome";
-    headers[i].style.color = 'pink';
+    headers[i].style.color = 'white';
     headers[i].style.textAlign = 'center';
 }
 //do the same for p elements
 const p = document.getElementsByTagName("p");
 for (let i = 0; i < p.length; i++){
     p[i].innerText = "This website is now about cats.";
+}
+
+function getRandomColor() {
+    const colors = ["#FFB6C1", "#FFC0CB", "#FF69B4", "#FFD1DC", "#FF1493", "#FF66CC", "#E0FFFF", "#89CFF0", "#008080", "#00FFFF","#40E0D0", "#87CEEB" ];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    document.body.style.backgroundColor= colors[randomIndex];
+    
 }

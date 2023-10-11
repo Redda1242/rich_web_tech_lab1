@@ -1,7 +1,7 @@
 function addNote()
 {
     const note = document.getElementById("note-input").value;
-    const noteColor = getRandomColor();
+    const noteColor = document.getElementById("color-picker").value;
     const noteElement = createNote(note, noteColor)
     document.getElementById('notes-container').appendChild(noteElement);
     document.getElementById('note-input').value = '';
@@ -29,11 +29,6 @@ function createNote(noteText, noteColor)
     
     return noteElement;
 
-}
-function getRandomColor() {
-    const colors = ["#FFB6C1", "#FFC0CB", "#FF69B4", "#FFD1DC", "#FF1493", "#FF66CC", "#E0FFFF", "#89CFF0", "#008080", "#00FFFF","#40E0D0", "#87CEEB" ];
-    const randomIndex = Math.floor(Math.random() * colors.length);
-    return colors[randomIndex];
 }
 
 function deleteNote(noteElement)

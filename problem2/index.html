@@ -12,7 +12,16 @@
         <h1>My Notes</h1>
         <div class="note-form">
             <input type="text" id="note-input" placeholder="Add a note">
+            <select id="color-picker">
+                <option value="#ff9999">Red</option>
+                <option value="#99ff99">Green</option>
+                <option value="#9999ff">Blue</option>
+                <option value="#ffff99">Yellow</option>
+                <option value="#ffcc99">Orange</option>
+                <option value="#cc99ff">Purple</option>
+            </select>
             <button onclick="addNote()">Add</button>
+            
         </div>
         <div class="notes" id="notes-container">
         </div>
